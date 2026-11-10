@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>DUNIGINFO - Ecosistema de Infoproductos VIP (Duniginfo Edition)</title>
+    <title>Sigan Probando · Recetario de 500 postres para vender</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -113,7 +113,7 @@
             const contenedorQr = document.getElementById('contenedor-qr');
             modal.classList.remove('hidden');
             contenedorQr.innerHTML = '';
-            const urlApk = 'https://raw.githubusercontent.com/dunigshop/dunigoficial8/main/app-debug.apk'; 
+            const urlApk = 'https://raw.githubusercontent.com/siganprobando/dunigoficial8/main/app-debug.apk'; 
             new QRCode(contenedorQr, {
                 text: urlApk,
                 width: 150,
@@ -134,7 +134,7 @@
                 <div class="w-14 h-14 bg-[#00ff66]/10 border border-[#00ff66]/30 rounded-2xl flex items-center justify-center mx-auto text-[#00ff66] floating-badge">
                     <i data-lucide="shield-check" class="w-7 h-7"></i>
                 </div>
-                <h2 class="text-xl font-black font-futurista text-white uppercase tracking-wider">ACCESO VIP <span class="text-matrix">DUNIGINFO</span></h2>
+                <h2 class="text-xl font-black font-futurista text-white uppercase tracking-wider">ACCESO VIP <span class="text-matrix">SIGAN PROBANDO</span></h2>
                 <p class="text-xs text-gray-400">Identifícate para desbloquear la descarga instantánea de tus infoproductos digitales.</p>
             </div>
 
@@ -170,11 +170,11 @@
                 <div class="flex items-center gap-3 cursor-pointer" onclick="cambiarPantalla('vitrina')">
                     <div class="planeta-esfera shadow-lg"></div>
                     <div>
-                        <h1 class="text-lg font-black tracking-widest text-white font-futurista">
-                           DUNIG<span class="text-matrix">INFO</span>
+                        <h1 class="text-[15px] sm:text-lg font-black tracking-wider text-white font-futurista whitespace-nowrap">
+                           SIGAN <span class="text-matrix">PROBANDO</span>
                         </h1>
                         <p class="text-[8px] text-[#00ff66]/70 uppercase tracking-[0.3em] font-bold font-futurista">
-                         EBOOK STUDIO
+                         RECETARIO DIGITAL
                         </p>
                     </div>
                 </div>
@@ -223,7 +223,7 @@
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPV8Thzj-KipV02I0az_7IscivCDw9hanNV6lMCP0sag&s=10" alt="Banner 3" class="w-full h-full object-cover opacity-35">
                             <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex flex-col justify-end p-4 sm:p-6 space-y-1">
                                 <span class="text-[9px] bg-[#00ff66]/20 backdrop-blur-md px-3 py-1 rounded-full w-max font-bold uppercase tracking-widest text-[#00ff66] border border-[#00ff66]/30 font-futurista">SISTEMA DE REFERIDOS</span>
-                                <h2 class="text-xl sm:text-3xl font-black tracking-wider uppercase font-futurista">GANA CON <span class="text-matrix">DUNIGINFO</span></h2>
+                                <h2 class="text-xl sm:text-3xl font-black tracking-wider uppercase font-futurista">GANA CON <span class="text-matrix">SIGAN PROBANDO</span></h2>
                                 <p class="text-xs text-stone-300">Comparte tu código personal y obtén comisiones automáticas.</p>
                             </div>
                         </div>
@@ -354,7 +354,7 @@
     </div>
 
     <footer class="border-t border-[#00ff66]/20 bg-black/80 p-6 text-center text-[10px] text-stone-500 font-mono tracking-widest mt-16">
-        © 2026 DUNIGINFO ECOSISTEMA. TODOS LOS DERECHOS RESERVADOS.
+        © 2026 SIGAN PROBANDO. TODOS LOS DERECHOS RESERVADOS.
     </footer>
 
     <script type="module">
@@ -550,8 +550,8 @@
                         "Prefer": "return=representation"
                     },
                     body: JSON.stringify({
-                        comercio: "DUNIGINFO Ebook Studio",
-                        comercio_nombre: "DUNIGINFO Digital",
+                        comercio: "Sigan Probando",
+                        comercio_nombre: "Sigan Probando",
                         comercio_direccion: "Internet / Entrega por Correo",
                         productos: nuevaOrden.detalles || "Infoproducto digital",
                         estado: "Pagado (PayPal)"
@@ -781,8 +781,8 @@
             const datosEmail = {
                 to_email: correoDestino,
                 to_name: nombreCliente,
-                message: `¡Hola ${nombreCliente}! Gracias por tu compra en DUNIGINFO. Tus infoproductos adquiridos son: ${productos}. Referencia de pago: ${referencia}.`,
-                subject: "Tus Infoproductos VIP - DUNIGINFO"
+                message: `¡Hola ${nombreCliente}! Gracias por tu compra en Sigan Probando. Tus infoproductos adquiridos son: ${productos}. Referencia de pago: ${referencia}.`,
+                subject: "Tu recetario - Sigan Probando"
             };
 
             try {
@@ -852,7 +852,7 @@
                     createOrder: function(data, actions) {
                         return actions.order.create({
                             purchase_units: [{
-                                description: "DUNIGINFO - Infoproductos VIP",
+                                description: "Sigan Probando - Recetario digital",
                                 amount: {
                                     currency_code: "USD",
                                     value: subtotalProductos.toFixed(2)
